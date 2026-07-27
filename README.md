@@ -12,35 +12,6 @@
 
 ---
 
-## `whoami`
-
-```c
-typedef struct {
-    const char *name;
-    const char *main_stack;
-    const char *side_stack[4];
-    const char *interest[4];
-} Developer;
-
-Developer me = {
-    .name = "Lee Jaeun",
-    .main_stack = "STM32 / Embedded C",
-    .side_stack = {
-        "Python",
-        "Verilog",
-        "SoC Design",
-        "Xilinx Vitis"
-    },
-    .interest = {
-        "Firmware",
-        "Digital Logic",
-        "Hardware-Software Co-Design",
-        "Real-Time Systems"
-    }
-};
-```
-
----
 
 ## `tech stack`
 
@@ -131,16 +102,6 @@ Developer me = {
 </p>
 
 <div align="center">
-
-```text
-while (alive) {
-    learn();
-    build();
-    debug();
-    repeat();
-}
-```
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:238636,100:58A6FF&height=120&section=footer" width="100%"/>
 
 </div>
