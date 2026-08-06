@@ -65,9 +65,9 @@
 
 | Project | Description | Stack |
 |:--|:--|:--|
-| [Smart_Fan](https://github.com/LDdd130/Smart_Fan) | 센서 기반 스마트 팬 제어 | `C` `Embedded` |
+| [Smart_Fan](https://github.com/LDdd130/Smart_Fan) | 센서 기반 스마트 팬 제어 | `C` |
 | [Elevater](https://github.com/LDdd130/Elevater) | 엘리베이터 제어 로직 구현 | `C` |
-| [PR_CAR](https://github.com/LDdd130/PR_CAR) | MCU 기반 차량 제어 프로젝트 | `C` `STM32` |
+| [PR_CAR](https://github.com/LDdd130/PR_CAR) | MCU 기반 차량 제어 프로젝트 | `C` |
 | [MimicArm](https://github.com/LDdd130/MimicArm) | 동작을 모사하는 디지털 시스템 | `Verilog` |
 
 ---
