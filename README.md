@@ -69,6 +69,7 @@
 | [Elevater](https://github.com/LDdd130/Elevater) | 엘리베이터 제어 로직 구현 | `C` |
 | [PR_CAR](https://github.com/LDdd130/PR_CAR) | MCU 기반 차량 제어 프로젝트 | `C` |
 | [MimicArm](https://github.com/LDdd130/MimicArm) | 동작을 모사하는 디지털 시스템 | `Verilog` |
+| [Mission SoC](https://github.com/LDdd130/SOC_Project) | 고장 감지·SAFE_MODE 전환 안전 SoC | `Verilog` |
 
 ---
 
