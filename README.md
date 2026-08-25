@@ -1,90 +1,84 @@
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:238636,100:58A6FF&height=220&section=header&text=LEE%20JAEUN&fontSize=52&fontColor=FFFFFF&fontAlignY=38&desc=Embedded%20%7C%20STM32%20%7C%20SoC%20%7C%20Digital%20Logic&descAlignY=60&animation=fadeIn" width="100%"/>
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=720&lines=Building+systems+close+to+the+hardware;Mainly+STM32+%26+C;Exploring+Python%2C+Verilog%2C+SoC+and+Vitis" alt="Typing SVG" />
-
-<br/>
-
-> **센서에서 레지스터까지, 직접 연결하고 동작시키는 개발자**
-
-</div>
-
----
-
-
-## `tech stack`
-
-### Main
-
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=c" height="46" alt="C"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white" alt="STM32"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/Embedded-111827?style=for-the-badge&logo=arm&logoColor=00C1DE" alt="Embedded"/>
+<p align="center">
+  <img src="./asset/profile_header.svg" width="100%"
+       alt="LDdd130 — STM32F4, ATmega128A, Artix-7을 다루는 firmware, embedded, RTL 개발자 프로필">
 </p>
-
-### Side
-
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=python" height="46" alt="Python"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/Verilog-6E4C9A?style=for-the-badge&logoColor=white" alt="Verilog"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/SoC-1F6FEB?style=for-the-badge&logo=amd&logoColor=white" alt="SoC"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/Xilinx_Vitis-E01F27?style=for-the-badge&logo=amd&logoColor=white" alt="Xilinx Vitis"/>
-</p>
-
-### Tools
-
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=git,github,vscode,linux" height="46" alt="Tools"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/STM32CubeIDE-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white" alt="STM32CubeIDE"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/Vivado-E01F27?style=for-the-badge&logo=amd&logoColor=white" alt="Vivado"/>
-</p>
-
----
-
-## `current focus`
-
-```text
-01. STM32 기반 임베디드 시스템 설계
-02. 센서·모터·통신 모듈 제어
-03. Verilog를 활용한 디지털 로직 구현
-04. SoC 환경에서 HW/SW Co-Design
-05. Vitis 기반 임베디드 소프트웨어 개발
-```
-
----
-
-## `featured projects`
-
-| Project | Description | Stack |
-|:--|:--|:--|
-| [PR_CAR](https://github.com/LDdd130/PR_CAR) | MCU 기반 차량 제어 프로젝트 | `C` |
-| [Mission SoC](https://github.com/LDdd130/SOC_Project) | 고장 감지·SAFE_MODE 전환 안전 SoC | `Verilog` |
-| [MimicArm](https://github.com/LDdd130/MimicArm) | 동작을 모사하는 디지털 시스템 | `Verilog` |
-| [Smart_Fan](https://github.com/LDdd130/Smart_Fan) | 센서 기반 스마트 팬 제어 | `C` |
-| [Elevater](https://github.com/LDdd130/Elevater) | 엘리베이터 제어 로직 구현 | `C` |
-
----
-
-## `contact`
 
 <p align="center">
-  <a href="mailto:YOUR_EMAIL">
-    <img src="https://img.shields.io/badge/Email-0D1117?style=for-the-badge&logo=gmail&logoColor=EA4335"/>
-  </a>
-  <a href="https://github.com/LDdd130">
-    <img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
+  <code>C</code>&nbsp;&nbsp;
+  <code>Verilog HDL</code>&nbsp;&nbsp;
+  <code>FreeRTOS</code>&nbsp;&nbsp;
+  <code>STM32</code>&nbsp;&nbsp;
+  <code>AVR</code>&nbsp;&nbsp;
+  <code>FPGA</code>
 </p>
 
-<div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:238636,100:58A6FF&height=120&section=footer" width="100%"/>
+센서를 읽고, 시간을 맞추고, 상태를 나눠 실제 하드웨어를 움직이는 코드를 작성합니다.  
+STM32·AVR 펌웨어와 Verilog RTL을 주로 다룹니다.
 
-</div>
+동작 영상, 구조도, 구현 세부사항과 확인된 제한 사항은 각 프로젝트 README에 정리했습니다.
+
+## Stack
+
+```text
+target      STM32F411 · ATmega128A · Artix-7 / Basys 3 · MicroBlaze
+language    C · Verilog HDL · Python
+runtime     FreeRTOS / CMSIS-RTOS2 · bare metal
+peripheral  UART · I²C / TWI · ADC · PWM · Timer Input Capture · 1-Wire · GPIO
+tooling     STM32CubeIDE · Vivado / Vitis · CMake · arm-none-eabi-gcc · avr-gcc · Git
+```
+
+## Projects
+
+### [01. PR_CAR](https://github.com/LDdd130/PR_CAR)
+
+`STM32F411CEU6` `FreeRTOS` `C`
+
+복도형 트랙을 주행하는 RC카 펌웨어입니다.
+
+- `SensorTask → value-copy queue → MotorTask`로 측정과 모터 출력을 분리했습니다.
+- 전방 초음파, 좌우 ToF, IMU, 엔코더를 주행 상태 머신의 입력으로 사용합니다.
+- 신선한 센서 프레임을 받은 경우에만 IWDG를 갱신합니다.
+
+### [02. SOC_Project](https://github.com/LDdd130/SOC_Project)
+
+`Basys 3` `Verilog` `MicroBlaze RISC-V` `C` `PySide6`
+
+Heartbeat 감시와 고장 대응을 Custom IP로 구성한 FPGA SoC입니다.
+
+- `heartbeat_monitor → fault_manager → safety_controller`를 RTL 신호로 직접 연결했습니다.
+- MicroBlaze는 설정과 IRQ 수집, PC 대시보드는 모니터링과 명령을 담당합니다.
+- 안전 상태 전이는 CPU나 UART 동작 여부와 분리했습니다.
+
+### [03. MimicArm](https://github.com/LDdd130/MimicArm)
+
+`Artix-7` `Verilog` `Vivado`
+
+보드 입력으로 자세를 저장하고 재생하는 Teach & Playback 로봇 팔입니다.
+
+- 자세 8개를 `25-bit × 8` D-FF 레지스터 뱅크에 저장합니다.
+- 현재 각도를 목표 각도에 ±1°씩 접근시켜 나눗셈 없이 보간합니다.
+- 서보 PWM도 미리 계산한 상수와 곱셈으로 변환합니다.
+
+### [04. Smart_Fan](https://github.com/LDdd130/Smart_Fan)
+
+`ATmega128A` `C` `CMake` `avr-gcc`
+
+DHT11, 조이스틱, 서보, UART 타이머를 묶은 선풍기 제어기입니다.
+
+- 온습도로 팬 듀티를 계산하고 목표값까지 단계적으로 변경합니다.
+- Timer2 ISR와 `system_millis`를 기준으로 센서·팬·서보·카운트다운 작업을 나눴습니다.
+- Timer1의 OC1A는 팬, OC1B는 수평 서보가 공유합니다.
+
+### [05. Elevator On-Device](https://github.com/LDdd130/Elevater)
+
+`STM32F411RE` `C` `STM32 HAL`
+
+물리 버튼과 Bluetooth 호출을 받는 3층 엘리베이터 모형 제어기입니다.
+
+- TIM3 Input Capture 초음파 2채널로 실제 층 도착을 판정합니다.
+- 문이 닫힌 뒤에만 이동을 시작하도록 서보 상태 머신과 인터록을 구성했습니다.
+- 스텝모터·문·부저는 HAL tick 기반으로 처리하고, Bluetooth 수신은 USART1 인터럽트를 사용합니다.
+
+---
+
+<sub>프로젝트 설명과 수치는 각 저장소의 소스 및 설정값을 기준으로 작성했습니다.</sub>
