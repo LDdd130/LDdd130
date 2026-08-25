@@ -73,24 +73,6 @@
 
 ---
 
-## `github status`
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=LDdd130&show_icons=true&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=238636&text_color=C9D1D9&rank_icon=github" height="165" alt="GitHub stats"/>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LDdd130&layout=compact&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9" height="165" alt="Top languages"/>
-
-</div>
-
-<div align="center">
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=LDdd130&hide_border=true&background=0D1117&stroke=30363D&ring=238636&fire=58A6FF&currStreakLabel=58A6FF&sideLabels=C9D1D9&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=8B949E" alt="GitHub streak"/>
-
-</div>
-
----
-
 ## `contact`
 
 <p align="center">
