@@ -1,84 +1,93 @@
-<p align="center">
-  <img src="./asset/profile_header.svg" width="100%"
-       alt="LDdd130 — STM32F4, ATmega128A, Artix-7을 다루는 firmware, embedded, RTL 개발자 프로필">
-</p>
+<div align="center">
 
-<p align="center">
-  <code>C</code>&nbsp;&nbsp;
-  <code>Verilog HDL</code>&nbsp;&nbsp;
-  <code>FreeRTOS</code>&nbsp;&nbsp;
-  <code>STM32</code>&nbsp;&nbsp;
-  <code>AVR</code>&nbsp;&nbsp;
-  <code>FPGA</code>
-</p>
+<img src="./asset/profile_header.svg" width="100%" alt="LEE JAEUN — firmware, embedded, RTL profile header"/>
 
-센서를 읽고, 시간을 맞추고, 상태를 나눠 실제 하드웨어를 움직이는 코드를 작성합니다.  
-STM32·AVR 펌웨어와 Verilog RTL을 주로 다룹니다.
+<br/>
 
-동작 영상, 구조도, 구현 세부사항과 확인된 제한 사항은 각 프로젝트 README에 정리했습니다.
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1100&color=58A6FF&center=true&vCenter=true&width=760&lines=STM32+%2F+AVR+firmware;FreeRTOS+%2F+bare-metal+scheduling;Verilog+RTL+%2F+AXI4-Lite+%2F+MicroBlaze;Timers+%2F+interrupts+%2F+state+machines" alt="Firmware and RTL topics"/>
 
-## Stack
+<br/>
 
-```text
-target      STM32F411 · ATmega128A · Artix-7 / Basys 3 · MicroBlaze
-language    C · Verilog HDL · Python
-runtime     FreeRTOS / CMSIS-RTOS2 · bare metal
-peripheral  UART · I²C / TWI · ADC · PWM · Timer Input Capture · 1-Wire · GPIO
-tooling     STM32CubeIDE · Vivado / Vitis · CMake · arm-none-eabi-gcc · avr-gcc · Git
-```
+<p><strong>센서를 읽고, 시간을 맞추고, 상태를 나눠 실제 하드웨어를 움직이는 코드를 작성합니다.</strong></p>
 
-## Projects
+<p>STM32·AVR 펌웨어와 Verilog RTL을 주로 다룹니다.<br/>
+동작 영상, 구조도, 구현 내용과 확인된 제한 사항은 각 프로젝트 README에 기록했습니다.</p>
 
-### [01. PR_CAR](https://github.com/LDdd130/PR_CAR)
-
-`STM32F411CEU6` `FreeRTOS` `C`
-
-복도형 트랙을 주행하는 RC카 펌웨어입니다.
-
-- `SensorTask → value-copy queue → MotorTask`로 측정과 모터 출력을 분리했습니다.
-- 전방 초음파, 좌우 ToF, IMU, 엔코더를 주행 상태 머신의 입력으로 사용합니다.
-- 신선한 센서 프레임을 받은 경우에만 IWDG를 갱신합니다.
-
-### [02. SOC_Project](https://github.com/LDdd130/SOC_Project)
-
-`Basys 3` `Verilog` `MicroBlaze RISC-V` `C` `PySide6`
-
-Heartbeat 감시와 고장 대응을 Custom IP로 구성한 FPGA SoC입니다.
-
-- `heartbeat_monitor → fault_manager → safety_controller`를 RTL 신호로 직접 연결했습니다.
-- MicroBlaze는 설정과 IRQ 수집, PC 대시보드는 모니터링과 명령을 담당합니다.
-- 안전 상태 전이는 CPU나 UART 동작 여부와 분리했습니다.
-
-### [03. MimicArm](https://github.com/LDdd130/MimicArm)
-
-`Artix-7` `Verilog` `Vivado`
-
-보드 입력으로 자세를 저장하고 재생하는 Teach & Playback 로봇 팔입니다.
-
-- 자세 8개를 `25-bit × 8` D-FF 레지스터 뱅크에 저장합니다.
-- 현재 각도를 목표 각도에 ±1°씩 접근시켜 나눗셈 없이 보간합니다.
-- 서보 PWM도 미리 계산한 상수와 곱셈으로 변환합니다.
-
-### [04. Smart_Fan](https://github.com/LDdd130/Smart_Fan)
-
-`ATmega128A` `C` `CMake` `avr-gcc`
-
-DHT11, 조이스틱, 서보, UART 타이머를 묶은 선풍기 제어기입니다.
-
-- 온습도로 팬 듀티를 계산하고 목표값까지 단계적으로 변경합니다.
-- Timer2 ISR와 `system_millis`를 기준으로 센서·팬·서보·카운트다운 작업을 나눴습니다.
-- Timer1의 OC1A는 팬, OC1B는 수평 서보가 공유합니다.
-
-### [05. Elevator On-Device](https://github.com/LDdd130/Elevater)
-
-`STM32F411RE` `C` `STM32 HAL`
-
-물리 버튼과 Bluetooth 호출을 받는 3층 엘리베이터 모형 제어기입니다.
-
-- TIM3 Input Capture 초음파 2채널로 실제 층 도착을 판정합니다.
-- 문이 닫힌 뒤에만 이동을 시작하도록 서보 상태 머신과 인터록을 구성했습니다.
-- 스텝모터·문·부저는 HAL tick 기반으로 처리하고, Bluetooth 수신은 USART1 인터럽트를 사용합니다.
+</div>
 
 ---
 
+## `toolbox`
+
+### Firmware
+
+<p>
+  <img src="https://skillicons.dev/icons?i=c&theme=dark" height="36" alt="C"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/STM32F4-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white" height="36" alt="STM32F4"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/FreeRTOS-3C9C35?style=for-the-badge&logo=freertos&logoColor=white" height="36" alt="FreeRTOS"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/ATmega128A-C4001D?style=for-the-badge&logo=microchip&logoColor=white" height="36" alt="ATmega128A"/>
+</p>
+
+### RTL / SoC
+
+<p>
+  <img src="https://img.shields.io/badge/Verilog_HDL-1E4C8A?style=for-the-badge" height="36" alt="Verilog HDL"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Artix--7-E01F27?style=for-the-badge&logo=amd&logoColor=white" height="36" alt="Artix-7"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/MicroBlaze_RISC--V-0071C5?style=for-the-badge&logo=amd&logoColor=white" height="36" alt="MicroBlaze RISC-V"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Vivado_%2F_Vitis-E01F27?style=for-the-badge&logo=amd&logoColor=white" height="36" alt="Vivado and Vitis"/>
+</p>
+
+### Tools / Host
+
+<p>
+  <img src="https://skillicons.dev/icons?i=python,cmake,git,github,vscode&theme=dark" height="36" alt="Python, CMake, Git, GitHub and VS Code"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/STM32CubeIDE-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white" height="36" alt="STM32CubeIDE"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/PySide6-41CD52?style=for-the-badge&logo=qt&logoColor=white" height="36" alt="PySide6"/>
+</p>
+
+---
+
+## `workbench`
+
+```text
+firmware  Timer · ISR · peripheral driver · FreeRTOS task
+control   Sensor · motor · servo · watchdog
+rtl       Synchronous logic · AXI4-Lite · testbench
+host      UART protocol · telemetry · PySide6 dashboard
+```
+
+---
+
+## `projects`
+
+| Project | 구현 내용 | Stack |
+|:--|:--|:--|
+| [**PR_CAR**](https://github.com/LDdd130/PR_CAR) | SensorTask → 값 복사 큐 → MotorTask 구조의 RC카. ToF·IMU·엔코더를 주행 입력으로 사용하고, 신선한 센서 프레임 수신 시에만 IWDG 갱신 | `STM32F411CEU6` `FreeRTOS` `C` |
+| [**Mission SoC**](https://github.com/LDdd130/SOC_Project) | `heartbeat_monitor → fault_manager → safety_controller` Custom IP 연결. MicroBlaze는 설정·IRQ 수집, PySide6는 모니터링 담당 | `Basys 3` `Verilog` `C` `Python` |
+| [**MimicArm**](https://github.com/LDdd130/MimicArm) | Teach & Playback 로봇 팔. D-FF 자세 저장, ±1° 증분 보간, 상수·곱셈 기반 서보 PWM | `Artix-7` `Verilog` |
+| [**Smart Fan**](https://github.com/LDdd130/Smart_Fan) | DHT11 팬 듀티, 조이스틱 2축 서보, UART 카운트다운을 Timer2 기반 협력식 주기 실행으로 구성 | `ATmega128A` `C` `CMake` |
+| [**Elevator On-Device**](https://github.com/LDdd130/Elevater) | 초음파 2채널 층 판정, 문 인터록, 스텝모터 이동, Bluetooth 층 호출 | `STM32F411RE` `HAL` `C` |
+
+<br/>
+
+<div align="center">
+
+<a href="https://github.com/LDdd130">
+  <img src="https://img.shields.io/badge/GitHub-LDdd130-0D1117?style=for-the-badge&logo=github&logoColor=white" alt="LDdd130 GitHub profile"/>
+</a>
+
+<br/><br/>
+
 <sub>프로젝트 설명과 수치는 각 저장소의 소스 및 설정값을 기준으로 작성했습니다.</sub>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:1F6FEB,100:8250DF&height=110&section=footer" width="100%" alt="Footer wave"/>
+
+</div>
