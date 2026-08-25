@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="280" viewBox="0 0 980 280" role="img" aria-labelledby="ttl desc">
+  <title id="ttl">LDdd130 — firmware, embedded, RTL</title>
+  <desc id="desc">STM32F4, ATmega128A, Artix-7을 다루는 펌웨어 및 RTL 개발자 프로필 헤더. 오른쪽에는 IRQ, PWM, UART, I2C 로직 파형이 표시되어 있다.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fff}.panel{fill:#f6f8fa;stroke:#d0d7de}.screen{fill:#fff;stroke:#8c959f}.grid{stroke:#d8dee4;stroke-width:1;stroke-dasharray:2 5}.trace{fill:none;stroke:#0969da;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}.trace2{fill:none;stroke:#8250df;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}.trace3{fill:none;stroke:#cf222e;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+      .title{fill:#1f2328;font:700 34px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif}.sub{fill:#0969da;font:600 16px ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace}.t{fill:#1f2328;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif}.m{fill:#656d76;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif}.k{fill:#1f2328;font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace}.chip{fill:#eef1f4;stroke:#afb8c1}
+      @media(prefers-color-scheme:dark){.bg{fill:#0d1117}.panel{fill:#161b22;stroke:#30363d}.screen{fill:#0d1117;stroke:#6e7681}.grid{stroke:#30363d}.trace{stroke:#58a6ff}.trace2{stroke:#d2a8ff}.trace3{stroke:#ff7b72}.title,.t,.k{fill:#e6edf3}.sub{fill:#58a6ff}.m{fill:#9198a1}.chip{fill:#21262d;stroke:#484f58}}
+    </style>
+  </defs>
+
+  <rect class="bg" width="980" height="280"/>
+  <rect x="20" y="20" width="940" height="240" rx="12" class="panel" stroke-width="1.2"/>
+
+  <text x="48" y="58" class="k" font-size="11">$ whoami</text>
+  <text x="48" y="102" class="title">LDdd130</text>
+  <text x="48" y="134" class="sub">firmware / embedded / rtl</text>
+  <text x="48" y="166" class="m" font-size="12">timers · interrupts · state machines · hardware</text>
+
+  <rect x="48" y="192" width="98" height="32" rx="16" class="chip"/>
+  <text x="97" y="212" class="k" font-size="10" text-anchor="middle">STM32F4</text>
+  <rect x="156" y="192" width="122" height="32" rx="16" class="chip"/>
+  <text x="217" y="212" class="k" font-size="10" text-anchor="middle">ATmega128A</text>
+  <rect x="288" y="192" width="102" height="32" rx="16" class="chip"/>
+  <text x="339" y="212" class="k" font-size="10" text-anchor="middle">Artix-7</text>
+  <rect x="400" y="192" width="112" height="32" rx="16" class="chip"/>
+  <text x="456" y="212" class="k" font-size="10" text-anchor="middle">FreeRTOS</text>
+
+  <rect x="580" y="42" width="352" height="196" rx="8" class="screen" stroke-width="1.2"/>
+  <text x="600" y="67" class="k" font-size="10" font-weight="600">logic trace</text>
+  <text x="912" y="67" class="m" font-size="9" text-anchor="end">100 MHz</text>
+
+  <line x1="674" y1="76" x2="674" y2="220" class="grid"/>
+  <line x1="724" y1="76" x2="724" y2="220" class="grid"/>
+  <line x1="774" y1="76" x2="774" y2="220" class="grid"/>
+  <line x1="824" y1="76" x2="824" y2="220" class="grid"/>
+  <line x1="874" y1="76" x2="874" y2="220" class="grid"/>
+  <line x1="596" y1="105" x2="916" y2="105" class="grid"/>
+  <line x1="596" y1="139" x2="916" y2="139" class="grid"/>
+  <line x1="596" y1="173" x2="916" y2="173" class="grid"/>
+  <line x1="596" y1="207" x2="916" y2="207" class="grid"/>
+
+  <text x="600" y="96" class="k" font-size="9.5">IRQ</text>
+  <polyline points="646,96 696,96 696,82 718,82 718,96 914,96" class="trace3"/>
+
+  <text x="600" y="130" class="k" font-size="9.5">PWM</text>
+  <polyline points="646,130 668,130 668,116 690,116 690,130 718,130 718,116 752,116 752,130 786,130 786,116 808,116 808,130 850,130 850,116 888,116 888,130 914,130" class="trace"/>
+
+  <text x="600" y="164" class="k" font-size="9.5">UART</text>
+  <polyline points="646,150 674,150 674,164 704,164 704,150 734,150 734,164 764,164 764,150 824,150 824,164 854,164 854,150 884,150 884,164 914,164" class="trace2"/>
+
+  <text x="600" y="198" class="k" font-size="9.5">I²C</text>
+  <polyline points="646,198 690,198 690,184 724,184 724,198 758,198 758,184 792,184 792,198 826,198 826,184 860,184 860,198 914,198" class="trace"/>
+  <circle cx="724" cy="184" r="3" fill="#8250df"/>
+  <circle cx="826" cy="184" r="3" fill="#8250df"/>
+</svg>
