@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:1F6FEB,100:8250DF&height=105&section=header" width="100%" alt="Header wave"/>
+
 <img src="./asset/profile_header.svg" width="100%" alt="LEE JAEUN — firmware, embedded, RTL profile header"/>
 
 <br/>
@@ -24,7 +26,7 @@
 <p>
   <img src="https://skillicons.dev/icons?i=c&theme=dark" height="36" alt="C"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/STM32F4-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white" height="36" alt="STM32F4"/>
+  <img src="https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white" height="36" alt="STM32"/>
   &nbsp;
   <img src="https://img.shields.io/badge/FreeRTOS-3C9C35?style=for-the-badge&logo=freertos&logoColor=white" height="36" alt="FreeRTOS"/>
   &nbsp;
